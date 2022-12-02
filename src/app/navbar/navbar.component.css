@@ -6,6 +6,7 @@ ul {
 
 li {
     float: right;
+    position: relative;
 }
 
 li a {
@@ -17,6 +18,24 @@ li a {
     flex: auto;
 }
 
+li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: green;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 /* Change the link color to #111 (black) on hover */
 nav {
     width: 85%;
@@ -26,14 +45,10 @@ nav {
     justify-items: center;
 }
 
-.log {
-    flex: 1;
-
-}
-
 img {
-    height: 100px;
-    width: 100px;
+    border-radius: 20px;
+    height: 70px;
+    width: 70px;
 }
 
 .navbar {
