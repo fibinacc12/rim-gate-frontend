@@ -1,0 +1,36 @@
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: transparent;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    flex: auto;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+nav {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+.log {
+    flex: 1;
+    
+}
+img {
+    height: 100px;
+    width: 100px;
+    margin-left: 50px;
+}
